@@ -148,6 +148,6 @@ activity_names <- c("Walking", "Walking upstairs", "Walking downstairs", "Sittin
 aggrData <- aggregate(subset_mean_std[,1:79], by = c(subset_mean_std$activity_labels, subset_mean_std$subject), FUN = mean)
 
  # write the data for course upload
- write.table(format(aggrData, scientific=T), "tidy2.txt",
-             row.names=F, col.names=F, quote=2)
+ write.table(format(aggrData, scientific=T), "tidy_data.txt", row.name=FALSE)
+ 
  
